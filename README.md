@@ -306,6 +306,7 @@ Affects type conversion (string operators, non-strict equality).
 
 # Usage
 
+As shown in [this demo app](http://plnkr.co/edit/YmAMzAmyfauDifoaWihM?p=preview),
 
 ```
 <body>
