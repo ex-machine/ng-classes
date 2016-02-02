@@ -21,7 +21,7 @@
     "es6",
     "node"
   ],
-  "main": "src/es6/index.js",
+  "main": "dist/es6/index.js",
   "ignore": [
     "**/.*",
     "node_modules",
