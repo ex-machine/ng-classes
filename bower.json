@@ -3,7 +3,7 @@
   "authors": [
     "ex-machine"
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ES6, ES7 and TS base classes for AngularJS units",
   "keywords": [
     "angular",
