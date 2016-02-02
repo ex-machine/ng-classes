@@ -1,0 +1,34 @@
+{
+  "name": "ng-classified",
+  "authors": [
+    "ex-machine"
+  ],
+  "version": "",
+  "description": "ES6, ES7 and TS base classes for AngularJS units",
+  "keywords": [
+    "angular",
+    "es6",
+    "es7",
+    "es2015",
+    "es2016",
+    "typescript",
+    "class",
+    "classes"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ex-machine/ng-classes",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "main": "src/es6/index.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": "^1.0"
+  },
+  "devDependencies": {}
+}

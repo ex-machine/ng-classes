@@ -1,0 +1,56 @@
+{
+  "name": "ng-classes",
+  "author": "ex-machine",
+  "version": "",
+  "description": "ES6, ES7 and TS base classes for AngularJS units",
+  "keywords": [
+    "angular",
+    "es6",
+    "es7",
+    "es2015",
+    "es2016",
+    "typescript",
+    "class",
+    "classes"
+  ],
+  "license": "MIT",
+  "main": "dist/es6/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ex-machine/ng-classes.git"
+  },
+  "engines": {
+    "node": ">= 4.0.0",
+    "iojs": ">= 3.0.0"
+  },
+  "devDependencies": {
+    "del": "^1.2.0",
+    "extend": "^3.0.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-copy": "0.0.2",
+    "gulp-debug": "^2.1.2",
+    "gulp-if": "^1.2.5",
+    "gulp-jsdoc-to-markdown": "^1.2.1",
+    "gulp-load-plugins": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-task-listing": "^1.0.1",
+    "gulp-typescript": "^2.10.0",
+    "gulp-util": "^3.0.7",
+    "jsdoc": "^3.4.0",
+    "jsdoc-to-markdown": "^1.3.3",
+    "mversion": "^1.10.0",
+    "run-sequence": "^1.1.1"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "angular": "^1.0"
+  },
+  "//": [
+    "npm run version -- 1.0.0"
+  ],
+  "scripts": {
+    "version": "mversion -n -m %s"
+  }
+}
