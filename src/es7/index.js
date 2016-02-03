@@ -64,6 +64,7 @@ export class NgBase {
 /**
  * Base class for Angular service providers.
  * Accepts a child of NgProviderInstance class as `$get` value to be instantiated as service instance.
+ * @augments NgBase
  */
 export class NgProvider extends NgBase {
 	/**
@@ -95,6 +96,7 @@ export class NgProvider extends NgBase {
 
 /**
  * Base class for Angular `provider` service instances
+ * @augments NgBase
  */
 export class NgProviderInstance extends NgBase {
 	/**
@@ -119,6 +121,7 @@ export class NgProviderInstance extends NgBase {
 
 /**
  * Base class for Angular directives
+ * @augments NgBase
  */
 export class NgDirective extends NgBase {
 	/**
@@ -153,7 +156,7 @@ export class NgDirective extends NgBase {
 	/**
 	 * `compile` function wrapper.
 	 * Runs original function and allows `compile`, `preLink` and `link` functions to co-exist on DDO.
-	 * @public
+	 * @private
 	 * @type {function}
 	 * @returns {function}
 	 */
@@ -179,7 +182,7 @@ export class NgDirective extends NgBase {
 
 	/**
 	 * `compile` getter/setter.
-	 * Puts original function to '_compileFn' and returns `_compile` wrapper.
+	 * Puts original function to `_compileFn` and returns `_compile` wrapper.
 	 * @public
 	 * @type {function}
 	 * @returns {function}
@@ -197,6 +200,7 @@ export class NgDirective extends NgBase {
 
 /**
  * Base class for Angular `component` templates
+ * @augments NgBase
  */
 export class NgTemplate extends NgBase implements INgTemplate {
 	/**

@@ -168,15 +168,14 @@ angular.module('average', [ngClassifiedModule])
         * [.$inject](#module_ng-classes..NgBase.$inject) : <code>Array.&lt;string&gt;</code>
         * [.$classify](#module_ng-classes..NgBase.$classify)
         * [.$factory()](#module_ng-classes..NgBase.$factory) ⇒ <code>function</code>
-    * [~NgProvider](#module_ng-classes..NgProvider)
+    * [~NgProvider](#module_ng-classes..NgProvider) ⇐ <code>NgBase</code>
         * [.$get](#module_ng-classes..NgProvider+$get) ⇒ <code>function</code>
-    * [~NgProviderInstance](#module_ng-classes..NgProviderInstance)
+    * [~NgProviderInstance](#module_ng-classes..NgProviderInstance) ⇐ <code>NgBase</code>
         * [new NgProviderInstance(provider, ...deps)](#new_module_ng-classes..NgProviderInstance_new)
-    * [~NgDirective](#module_ng-classes..NgDirective)
+    * [~NgDirective](#module_ng-classes..NgDirective) ⇐ <code>NgBase</code>
         * [.restrict](#module_ng-classes..NgDirective.NgDirective+restrict) : <code>string</code>
         * [.compile](#module_ng-classes..NgDirective+compile) ⇒ <code>function</code>
-        * [._compile()](#module_ng-classes..NgDirective+_compile) ⇒ <code>function</code>
-    * [~NgTemplate](#module_ng-classes..NgTemplate)
+    * [~NgTemplate](#module_ng-classes..NgTemplate) ⇐ <code>NgBase</code>
         * [.toString()](#module_ng-classes..NgTemplate+toString) ⇒ <code>string</code>
         * [.valueOf()](#module_ng-classes..NgTemplate+valueOf) ⇒ <code>string</code>
 
@@ -222,11 +221,12 @@ Creates an annotated class wrapper which is supplied to Angular injector.
 **Returns**: <code>function</code> - Factory function that returns a new class instance.  
 **Access:** public  
 <a name="module_ng-classes..NgProvider"></a>
-### ng-classes~NgProvider
+### ng-classes~NgProvider ⇐ <code>NgBase</code>
 Base class for Angular service providers.
 Accepts a child of NgProviderInstance class as `$get` value to be instantiated as service instance.
 
 **Kind**: inner class of <code>[ng-classes](#module_ng-classes)</code>  
+**Extends:** <code>NgBase</code>  
 <a name="module_ng-classes..NgProvider+$get"></a>
 #### ngProvider.$get ⇒ <code>function</code>
 `$get` getter/setter.
@@ -235,10 +235,11 @@ Dispathes factory function from/to `_$get`.
 **Kind**: instance property of <code>[NgProvider](#module_ng-classes..NgProvider)</code>  
 **Access:** public  
 <a name="module_ng-classes..NgProviderInstance"></a>
-### ng-classes~NgProviderInstance
+### ng-classes~NgProviderInstance ⇐ <code>NgBase</code>
 Base class for Angular `provider` service instances
 
 **Kind**: inner class of <code>[ng-classes](#module_ng-classes)</code>  
+**Extends:** <code>NgBase</code>  
 <a name="new_module_ng-classes..NgProviderInstance_new"></a>
 #### new NgProviderInstance(provider, ...deps)
 
@@ -248,15 +249,15 @@ Base class for Angular `provider` service instances
 | ...deps | <code>\*</code> | Injected dependencies. |
 
 <a name="module_ng-classes..NgDirective"></a>
-### ng-classes~NgDirective
+### ng-classes~NgDirective ⇐ <code>NgBase</code>
 Base class for Angular directives
 
 **Kind**: inner class of <code>[ng-classes](#module_ng-classes)</code>  
+**Extends:** <code>NgBase</code>  
 
-* [~NgDirective](#module_ng-classes..NgDirective)
+* [~NgDirective](#module_ng-classes..NgDirective) ⇐ <code>NgBase</code>
     * [.restrict](#module_ng-classes..NgDirective.NgDirective+restrict) : <code>string</code>
     * [.compile](#module_ng-classes..NgDirective+compile) ⇒ <code>function</code>
-    * [._compile()](#module_ng-classes..NgDirective+_compile) ⇒ <code>function</code>
 
 <a name="module_ng-classes..NgDirective.NgDirective+restrict"></a>
 #### ngDirective.restrict : <code>string</code>
@@ -268,24 +269,18 @@ Restricts directive declaration, forces the defaults in Angular 1.2.x for consis
 <a name="module_ng-classes..NgDirective+compile"></a>
 #### ngDirective.compile ⇒ <code>function</code>
 `compile` getter/setter.
-Puts original function to '_compileFn' and returns `_compile` wrapper.
+Puts original function to `_compileFn` and returns `_compile` wrapper.
 
 **Kind**: instance property of <code>[NgDirective](#module_ng-classes..NgDirective)</code>  
 **Access:** public  
-<a name="module_ng-classes..NgDirective+_compile"></a>
-#### ngDirective._compile() ⇒ <code>function</code>
-`compile` function wrapper.
-Runs original function and allows `compile`, `preLink` and `link` functions to co-exist on DDO.
-
-**Kind**: instance method of <code>[NgDirective](#module_ng-classes..NgDirective)</code>  
-**Access:** public  
 <a name="module_ng-classes..NgTemplate"></a>
-### ng-classes~NgTemplate
+### ng-classes~NgTemplate ⇐ <code>NgBase</code>
 Base class for Angular `component` templates
 
 **Kind**: inner class of <code>[ng-classes](#module_ng-classes)</code>  
+**Extends:** <code>NgBase</code>  
 
-* [~NgTemplate](#module_ng-classes..NgTemplate)
+* [~NgTemplate](#module_ng-classes..NgTemplate) ⇐ <code>NgBase</code>
     * [.toString()](#module_ng-classes..NgTemplate+toString) ⇒ <code>string</code>
     * [.valueOf()](#module_ng-classes..NgTemplate+valueOf) ⇒ <code>string</code>
 
